@@ -80,7 +80,7 @@ $(function(){
 	}
 
 	$("#startSortBtn").click(function(){
-		$(this).prop('disabled', true).text('Enojoy sorting...');
+		$(this).prop('disabled', true).text('Enjoy sorting...');
 		bubbleSort();
 	});
 });
