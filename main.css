@@ -1,0 +1,160 @@
+@import url(https://fonts.googleapis.com/css?family=Indie+Flower);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic);
+body{
+	box-sizing: border-box;
+	background-color:  #2e8372;
+}
+button{
+	background:#f1c40f;
+	color:#fff;
+	border:none;
+	position:relative;
+	height:60px;
+	width: 300px;
+	font-size:1.6em;
+	padding:0 2em;
+	cursor:pointer;
+	transition:800ms ease all;
+	outline:none;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+button:hover{
+	background:#34495e;
+	color:#f1c40f;
+}
+button:before,button:after{
+	content:'';
+	position:absolute;
+	top:0;
+	right:0;
+	height:2px;
+	width:0;
+	background: #f1c40f;
+	transition:400ms ease all;
+}
+button:after{
+	right:inherit;
+	top:inherit;
+	left:0;
+	bottom:0;
+}
+button:hover:before,button:hover:after{
+	width:100%;
+	transition:800ms ease all;
+}
+.container{
+	width: 1024px;
+	margin: 0 auto;
+}
+.game-name{
+	text-align: center;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+.userInput-scene_instr{
+	text-align: center;
+	font-family: 'Love Ya Like A Sister', cursive;
+}
+.userInput-scene-list{
+	list-style: none;
+	text-align: center;
+	padding-left: 0;
+	font-size: 0;
+	margin-bottom: 50px;
+}
+.userInput-scene-list-item{
+	display: inline-block;
+}
+.userInput-scene-list-item input{
+	width: 50px;
+	margin-right: 10px;
+	border: 2px solid  #f1c40f;
+	border-radius: 5px;
+	padding: 10px;
+	color: green;
+	font-family: 'Indie Flower', cursive;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+}
+.randomBtn{
+	display: block;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+.userInput-scene_messageBox{
+	height: 80px;
+	text-align: center;
+	font-size: 32px;
+	color: yellow;
+	font-family: 'Love Ya Like A Sister', cursive;
+	margin-bottom: 20px;
+}
+sort-scene_list{
+	margin-top: 100px;
+	height:210px;
+	font-size: 0;
+}
+.sort-scene_list li {
+	position:relative;
+	bottom: -150px;
+	display:inline-block;
+	right:inherit;
+	width:100px;
+	height:102px;
+	background: url("http://iweb.az/minion.png") no-repeat;
+	background-size: 100px, 102px;
+	text-align:center;
+	line-height:50px;
+	opacity: 0;
+	transform: scale(0.7) translate(0, 0);
+	transition: transform .3s ease-in-out;
+}
+.sort-scene_list li:after{
+	content: '';
+	background: transparent;
+	width: 14px;
+	height: 14px;
+	display: block;
+	position: absolute;
+	top: 26px;
+	left: 14px;
+	border-radius: 50%;
+	animation: blink 4s ease-in-out infinite;
+}
+.sort-scene_list li:before{
+	content: '';
+	background: transparent;
+	width: 14px;
+	height: 14px;
+	display: block;
+	position: absolute;
+	top: 22px;
+	left: 33px;
+	border-radius: 50%;
+	animation: blink 4s ease-in-out infinite;
+}
+.sort-scene_list li.shrink {
+	transform: scale(1.1) translate(0, 20px);
+}
+.sort-scene_list li span{
+	font-size: 25px;
+	font-family: 'Indie Flower', cursive;
+	position: absolute;
+	top: 19px;
+	right: 12px;
+}
+.sort-scene_startSortBtn:disabled{
+	color: blue;
+}
+
+@keyframes blink {
+	90% {
+		background: transparent;
+	}
+
+	95% {
+		background: #F6D447;
+	}
+}
